@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Palatino Linotype", Arial;
+  font-size: 16px;
+  line-height: 1.6;
+}
+header {
+  position: fixed;
+  display: flex;
+}
+header img {
+  min-width: 200px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  top: 0;
+  left: 0;
+  right:0;
+}
+body {
+  width: 100vw;
+  margin-top: 20px;
+  font-family: "Palatino Linotype", Serif;
+}
+#inputs {
+  text-align: center;
+  padding: 4px;
+}
+input[type="email"] {
+  padding: 4px;
+  margin: 2px auto;
+  width: 200px;
+}
+input[type="submit"] {
+  color: white;
+  background-color: #006400;
+  padding: 4px;
+  border: solid 2px #45a045;
+  border-radius: 4px;
+  cursor: auto;
+}
+input[type="submit"]:hover {
+  border: solid 2px #006400;
+  background-color: #45a045;
+}
+#products {
+  padding: 12px 16px;
+}
+
+.logo-container {
+  margin: 0 auto;
+  padding-top: 0px;
+
+}
+iframe {
+  width: 94.5vw;
+  min-height: 50vh;
+  vertical-align: middle;
+  padding: 20px;
+  border: none;
+  transform: scale(1,1);
+}
+#nav-bar {
+  overflow: hidden;
+  background-color: #ccc;
+  padding: 2px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+.nav-link {
+  display: block;
+  color: #000;
+  text-align: center !important;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #006400;
+}
+.flex-box {
+  position: relative; 
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2), 2px 2px 3px rgba(0, 100, 0, .2);
+  overflow: hidden;
+}
+.flex-box img:hover{
+  transform: scale(1.5,1.5) translate(0px,45px);
+  z-index: 0;
+  filter: brightness(100%);
+  transition: 0.6s;  
+}
+.column img {
+    margin-top: 4px;
+    vertical-align: middle;
+    filter: brightness(70%);
+}
+.deets h2{
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+  font-size: 24px;
+  width: 94%;
+  padding: 12px 6px;
+  border-radius: 4px;
+  z-index: 1;
+}
+.deets p{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 100, 0, 0.8);
+  color: white;
+  width: 50px;
+  padding: 20px 22px;
+  font-size: 32px;
+  border: 2px solid #45a045;
+  border-radius: 10px;
+  transform: rotate(-15deg);
+  text-align:left;
+  z-index: 1;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 10;
+  width: 100vw;
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Smallest devices (600px or less) */
+@media (max-width: 600px) {
+  header {
+    z-index:3;
+  }
+  nav {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  body {
+    width: auto !important;
+    height: auto !important;
+    margin-top: 140px;
+  }
+  a:target {
+    padding-top: 130px;
+  }
+  .nav-link {
+    width: 95%;
+    text-align: center;
+  }
+  .flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+  }
+  .flex-box {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  iframe {
+    width: 100vw;
+  }
+.deets p{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 100, 0, 0.8);
+  color: white;
+  width: 30px;
+  padding: 6px 6px;
+  font-size: 16px;
+  border-radius: 4px;
+  transform: rotate(-15deg);
+  text-align:left;
+}
+  .column {
+    flex: 50%;
+    max-width: 60%;
+    padding: 2px 2px;
+    
+  }
+  .column img {
+    margin-top: 4px;
+    vertical-align: middle;
+    filter: brightness(70%);
+    transform: scale(1,1);
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+  }
+    #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    z-index: 99;
+    border: solid 2px #006400;
+    outline: none;
+    background-color: #006400;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  #myBtn:hover {
+    background-color: #ccc;
+    color: black;
+  }
+  footer {
+    width: 100vw;
+  }
+}
+
+/* Small to Medium devices (600px to 992px) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  header {
+    z-index: 3;
+  }
+  body {
+    width: auto !important;
+    height: auto !important;
+    margin-top: 80px;
+  }
+  a:target {
+    padding-top: 70px;
+  }
+  .logo-container {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0px 0px 40px;
+  }
+  .nav-link {
+    display: inline !important;
+    padding: 10px 30px;
+    text-align: center;    
+  }
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .flex-box img:hover{
+  transform: scale(1.5,1.5) translate(0px,35px);
+
+
+}
+  .column img {
+    vertical-align: middle;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+  }
+  .column {
+    flex: 20%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  .deets p{
+  width: 30px;
+  padding: 6px 6px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+  .deets h2 {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+  header {
+    min-width: 100%;
+    display: flex;
+    z-index: 3;
+  }
+  body {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 80px;
+  }
+  a:target {
+    padding-top: 70px;
+  }
+  .logo-container {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0px 0px 40px;
+  }
+  .nav-link {
+    display: inline !important;
+    text-align: center !important;
+    padding: 10px 30px;
+  }
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2px 4px;
+  }
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+
+  }
+  .flex-box {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: content-box;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 4px;
+    box-sizing: content-box;
+  }
+  .column {
+    flex: 20%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+}
