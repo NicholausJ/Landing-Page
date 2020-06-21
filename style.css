@@ -5,7 +5,9 @@
   font-size: 16px;
   line-height: 1.6;
 }
-
+nav {
+  z-index: 1;
+}
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {
   display: none;
